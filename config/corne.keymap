@@ -35,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE        &kp N1  &kp N2         &kp N3             &kp N4         &kp N5              &kp N6     &kp N7         &kp N8            &kp N9     &kp N0  &kp DELETE
-&trans            &trans  &kp K_MUTE     &kp C_VOLUME_DOWN  &kp C_VOL_UP   &kp C_PLAY_PAUSE    &kp LEFT   &kp DOWN       &kp UP            &kp RIGHT  &trans  &kp ENTER
-&kp LEFT_CONTROL  &trans  &kp LC(RS(X))  &kp LS(LC(C))      &kp LS(LC(V))  &trans              &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP       &kp END    &trans  &kp RIGHT_SHIFT
-                                         &tog 3             &kp LEFT_GUI   &kp LEFT_ALT        &kp SPACE  &trans         &kp SINGLE_QUOTE
+&kp ESCAPE        &kp N1  &kp N2      &kp N3             &kp N4        &kp N5              &kp N6     &kp N7         &kp N8            &kp N9     &kp N0  &kp DELETE
+&trans            &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp C_PLAY_PAUSE    &kp LEFT   &kp DOWN       &kp UP            &kp RIGHT  &trans  &kp ENTER
+&kp LEFT_CONTROL  &trans  &trans      &trans             &trans        &trans              &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP       &kp END    &trans  &kp RIGHT_SHIFT
+                                      &tog 3             &kp LEFT_GUI  &kp LEFT_ALT        &kp SPACE  &trans         &kp SINGLE_QUOTE
             >;
         };
 
@@ -50,16 +50,16 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE  &kp EXCL          &kp AT            &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp LPAR   &kp RPAR  &kp PIPE       &kp TILDE
-&trans      &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &trans    &trans    &trans          &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &trans         &trans
-&kp LCTRL   &kp LS(LCTRL)     &kp LS(LG(T))     &trans    &trans    &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp BACKSLASH  &kp RIGHT_SHIFT
-                                                &trans    &kp LGUI  &kp LEFT_ALT    &kp SPACE  &trans     &kp GRAVE
+&kp TILDE  &trans            &trans            &trans         &trans         &kp RG(LS(T))    &kp CARET  &kp AMPS   &kp LPAR   &kp RPAR  &kp PIPE       &kp TILDE
+&trans     &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp RC(N3)     &trans         &trans           &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &trans         &trans
+&kp LCTRL  &kp LS(LCTRL)     &kp LS(LC(X))     &kp LS(LC(C))  &kp LS(RC(V))  &trans           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp BACKSLASH  &kp RIGHT_SHIFT
+                                               &trans         &kp LGUI       &kp LEFT_ALT     &kp SPACE  &trans     &kp GRAVE
             >;
         };
 
         layer_3 {
             bindings = <
-&kp F1          &kp F2          &kp F3          &kp F4          &kp F5        &kp F6          &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1          &kp F2          &kp F3          &kp F4          &kp F5        &kp F6          &trans  &trans  &trans  &trans  &trans  &bootloader
 &kp LA(LC(F1))  &kp LA(LC(F2))  &kp LA(LC(F3))  &kp LA(LC(F4))  &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
                                                 &trans          &trans        &trans          &trans  &trans  &trans
