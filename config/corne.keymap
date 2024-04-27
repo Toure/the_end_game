@@ -9,19 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        toggle-bt0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <39 38 10 39>;
-        };
-
-        toggle-bt3 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <38 39 9>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -64,19 +52,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans         &trans         &kp RG(LS(T))    &kp CARET  &kp AMPS   &kp LPAR   &kp RPAR  &kp PIPE       &kp TILDE
-&trans     &kp LC(NUMBER_1)    &kp LC(NUMBER_2)     &kp RC(N3)     &trans         &trans           &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &trans         &trans
-&kp LCTRL  &kp LS(LCTRL)       &kp LS(LC(X))        &kp LS(LC(C))  &kp LS(RC(V))  &trans           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp BACKSLASH  &kp RIGHT_SHIFT
-                                                    &trans         &kp LGUI       &kp LEFT_ALT     &kp SPACE  &trans     &kp GRAVE
+&kp LA(TILDE)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans         &trans         &kp LS(LEFT_CONTROL)    &kp CARET  &kp AMPS   &kp LPAR   &kp RPAR  &kp PIPE       &kp TILDE
+&trans         &kp LC(NUMBER_1)    &kp LC(NUMBER_2)     &kp RC(N3)     &trans         &trans                  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &trans         &trans
+&kp LCTRL      &trans              &kp LS(LC(X))        &kp LS(LC(C))  &kp LS(RC(V))  &trans                  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp BACKSLASH  &kp RIGHT_SHIFT
+                                                        &trans         &kp LGUI       &kp LEFT_ALT            &kp SPACE  &trans     &kp GRAVE
             >;
         };
 
         layer_3 {
             bindings = <
-&kp F1          &kp F2          &kp F3          &kp F4          &kp F5        &kp F6          &kp F7       &kp F8      &trans  &trans  &trans  &trans
-&kp LA(LC(F1))  &kp LA(LC(F2))  &kp LA(LC(F3))  &kp LA(LC(F4))  &trans        &trans          &trans       &trans      &trans  &trans  &trans  &trans
-&bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &trans       &trans      &trans  &trans  &trans  &trans
-                                                &to 0           &sys_reset    &bootloader     &bootloader  &sys_reset  &trans
+&kp F1          &kp F2          &kp F3          &kp F4          &kp F5        &kp F6          &kp F7       &kp F8  &trans  &trans  &trans  &trans
+&kp LA(LC(F1))  &kp LA(LC(F2))  &kp LA(LC(F3))  &kp LA(LC(F4))  &trans        &trans          &trans       &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &trans       &trans  &trans  &trans  &trans  &trans
+                                                &trans          &trans        &bootloader     &bootloader  &trans  &trans
             >;
         };
     };
